@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<div class="container-fluid">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-4 text-left panel-title">
+						<h4>
+							<a style="color: white" href="./welcome.xhtml">Project WS</a>
+						</h4>
+					</div>
+					<div class="col-md-8 text-right">
+						<h:form style="float:right">
+							<p>Hello #{loginController.username}</p>
+							<p:commandButton  value="Sair" action="#{loginController.doLogout}"></p:commandButton>
+						</h:form>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body" style="padding: 20px;">
+				<ui:insert name="content">
+					<h1>Sem Conteúdo</h1>
+				</ui:insert>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>
